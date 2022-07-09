@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import menuList from './menuList'
+import ToggleTheme from './ToggleTheme'
 
 const DesktopMenu = () => {
-	const { asPath } = useRouter()
 	return (
 		<Flex align='center' gap='8' display={['none', 'none', 'flex']}>
 			{menuList.map((link) => (
@@ -13,6 +13,7 @@ const DesktopMenu = () => {
 					<Link href={link.href}>{link.name}</Link>
 				</Text>
 			))}
+			<ToggleTheme />
 		</Flex>
 	)
 }
