@@ -14,7 +14,8 @@ const useHashRouter = (elements: RefObject<HTMLDivElement>[]) => {
 					const distance = window.scrollY - element.current?.offsetTop!
 					const hash = toHash(element.current?.id!)
 					if (distance < 30 && distance > -30 && currentHash != hash) {
-						router.push(hash)
+            router.push(hash)
+						// eslint-disable-next-line react-hooks/exhaustive-deps
 						currentHash = hash
 					}
 				})
