@@ -8,7 +8,7 @@ import ToggleMenu from './toggleMenu'
 const Navbar = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
 	return (
-		<Flex as='div' name='home' justify='space-between' align='center' py='5'>
+		<Flex as='div' id='home' justify='space-between' align='center' py='5'>
 			<Logo />
 			<ToggleMenu onOpen={onOpen} />
 			<MobileMenu isOpen={isOpen} onClose={onClose} />
