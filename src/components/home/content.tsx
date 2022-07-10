@@ -37,7 +37,7 @@ const Content = () => {
 				minus molestias vero perferendis quibusdam
 			</Text>
 
-			<Button bg='primary'>Contact Now</Button>
+			<Button color="white" bg='primary'>Contact Now</Button>
 		</Flex>
 	)
 }

@@ -1,10 +1,11 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 import Content from './content'
 import Form from './form'
 
 const NewLetter = () => {
+	const color = useColorModeValue('blackAlpha.50', 'whiteAlpha.400')
 	return (
 		<Flex
 			as={motion.div}
@@ -24,9 +25,10 @@ const NewLetter = () => {
 			w='full'
 			px={['10px', '10px', '20px', '100px']}
 			py={['20px', '20px', '20px', '42px']}
-			bg='whiteAlpha.400'
+			bg={color}
+			shadow='lg'
 			rounded='2xl'
-			mb='150px'
+			mb={['100px', '100px', '150px']}
 			gap='4'>
 			<Content />
 			<Form />

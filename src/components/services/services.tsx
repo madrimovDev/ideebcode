@@ -1,10 +1,19 @@
-import { Flex, Grid, GridItem, Heading, Icon } from '@chakra-ui/react'
+import {
+	Flex,
+	Grid,
+	GridItem,
+	Heading,
+	Icon,
+	useColorModeValue,
+} from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 import Services from '.'
 import serviceList from './serviceList'
 
 const ServicesList = () => {
+	const color = useColorModeValue('blackAlpha.50', 'whiteAlpha.400')
+
 	return (
 		<Grid
 			gridTemplateColumns={[
@@ -12,9 +21,9 @@ const ServicesList = () => {
 				'repeat(2, 1fr)',
 				'repeat(3, 1fr)',
 			]}
-			gap={['10px', '20px', '20px', '40px']}
+			gap={['20px', '20px', '20px', '40px']}
 			placeItems='center'
-			w={['100%', '100%', '55%', '55%']}
+			w={['70%', '70%', '55%', '55%']}
 			as={motion.div}>
 			{serviceList.map((service) => (
 				<GridItem
@@ -46,10 +55,11 @@ const ServicesList = () => {
 						align='center'
 						textAlign='center'
 						gap='4'
-						bg='whiteAlpha.400'
-						p={['4', '6', '6', '6']}
+						bg={color}
+						shadow={['base', 'base', 'lg']}
+						p={['8', '6', '6', '6']}
 						rounded='2xl'>
-						<Flex fontSize={['3xl', '3xl', '4xl', '6xl']}>
+						<Flex fontSize={['5xl', '5xl', '4xl', '6xl']}>
 							{<service.icon fontSize='inherit' />}
 						</Flex>
 						<Heading as='h6' fontSize='xl'>

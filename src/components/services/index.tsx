@@ -11,7 +11,7 @@ const Services = ({ refObj }: ServicesPropsType) => {
 	return (
 		<Flex
 			flexDir={['column', 'column', 'row']}
-			mb='150px'
+			mb={['100px', '100px', '150px']}
 			ref={refObj}
 			id='ourservices'
 			justify='space-between'

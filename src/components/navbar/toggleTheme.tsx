@@ -1,14 +1,19 @@
 import React from 'react'
-import { Button, Flex, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import {
+	Flex,
+	IconButton,
+	useColorMode,
+	useColorModeValue,
+} from '@chakra-ui/react'
 import { BsMoonFill, BsSunFill } from 'react-icons/bs'
 
 const ToggleTheme = () => {
 	const { toggleColorMode } = useColorMode()
 	const Icon = useColorModeValue(BsMoonFill, BsSunFill)
 	return (
-		<Flex as='button' justify='center' align='center' onClick={toggleColorMode}>
+		<IconButton aria-label='toggle-theme' size="xs" fontSize='xs' onClick={toggleColorMode}>
 			<Icon />
-		</Flex>
+		</IconButton>
 	)
 }
 

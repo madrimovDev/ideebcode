@@ -23,7 +23,7 @@ const Article = ({ refObj }: ArticlePropsType) => {
 				},
 			}}
 			mt={[0, '5', '10']}
-			mb='150px'
+			mb={['100px', "100px", "150px"]}
 			flexDir={['column-reverse', 'column-reverse', 'row']}
 			ref={refObj}
 			justify='center'

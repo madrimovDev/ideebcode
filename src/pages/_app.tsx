@@ -1,15 +1,16 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
 import theme from '../config/theme.config'
+import { Chakra } from '../config/chakra'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	return (
-		<ChakraProvider resetCSS theme={theme}>
+		<Chakra cookies={pageProps.cookies}>
 			<Component {...pageProps} />
-			<ColorModeScript initialColorMode='dark' />
-		</ChakraProvider>
+		</Chakra>
 	)
 }
 
 export default MyApp
+
+export { getServerSideProps } from '../config/chakra'
