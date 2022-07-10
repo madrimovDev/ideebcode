@@ -4,7 +4,9 @@ import {
 	GridItem,
 	Heading,
 	Icon,
+	Theme,
 	useColorModeValue,
+	useTheme,
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
@@ -13,7 +15,7 @@ import serviceList from './serviceList'
 
 const ServicesList = () => {
 	const color = useColorModeValue('blackAlpha.50', 'whiteAlpha.400')
-
+	const { colors } = useTheme()
 	return (
 		<Grid
 			gridTemplateColumns={[
@@ -50,6 +52,16 @@ const ServicesList = () => {
 						amount: 0.8,
 					}}>
 					<Flex
+						as={motion.div}
+						whileHover={{
+							scale: 1.1,
+							color: colors.primary,
+							transition: {
+								type: 'spring',
+								bounce: 0.7,
+							},
+						}}
+						cursor="pointer"
 						flexDir='column'
 						justify='center'
 						align='center'
