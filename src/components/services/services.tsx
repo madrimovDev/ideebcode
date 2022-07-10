@@ -60,7 +60,7 @@ const ServicesList = () => {
 						p={['8', '6', '6', '6']}
 						rounded='2xl'>
 						<Flex fontSize={['5xl', '5xl', '4xl', '6xl']}>
-							{<service.icon fontSize='inherit' />}
+							{<service.icon />}
 						</Flex>
 						<Heading as='h6' fontSize='xl'>
 							{service.name}

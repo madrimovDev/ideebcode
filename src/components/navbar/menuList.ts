@@ -16,27 +16,27 @@ export type MenuLink = {
 const menuList: MenuLink[] = [
 	{
 		name: 'Home',
-		href: '/',
+		href: '',
 		icon: AiOutlineHome,
 	},
 	{
 		name: 'Our Services',
-		href: '#ourservices',
+		href: 'ourservices',
 		icon: AiOutlineSetting,
 	},
 	{
 		name: 'Projects',
-		href: '#projects',
+		href: 'projects',
 		icon: AiOutlineProject,
 	},
 	{
 		name: 'Our Team',
-		href: '#ourteam',
+		href: 'ourteam',
 		icon: AiOutlineTeam,
 	},
 	{
 		name: 'Contact',
-		href: '#contact',
+		href: 'contact',
 		icon: AiOutlineContacts,
 	},
 ]

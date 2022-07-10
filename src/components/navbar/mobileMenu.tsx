@@ -8,10 +8,10 @@ import {
 	IconButton,
 	useColorMode,
 } from '@chakra-ui/react'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
+import { Link } from 'react-scroll'
 import menuList from './menuList'
 import ToggleTheme from './toggleTheme'
 
@@ -35,31 +35,32 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuPropsType) => {
 				</DrawerHeader>
 				<Flex flexDir='column' px='4'>
 					{menuList.map((link) => (
-						<Link href={link.href} key={link.href}>
-							<Flex
-								as='button'
-								align='center'
-								gap='2'
-								py='2'
-								px='4'
-								rounded='base'
-								onClick={onClose}
-								bg={
-									asPath === (link.href === '/' ? '/' : '/' + link.href)
-										? 'gray.600'
-										: 'transparent'
-								}
-								color={
-									colorMode === 'light'
-										? asPath === (link.href === '/' ? '/' : '/' + link.href)
-											? 'white'
-											: 'black'
-										: 'white'
-								}>
-								<Icon as={link.icon} />
-								{link.name}
-							</Flex>
-						</Link>
+						<React.Fragment key={link.href}>
+							<Link hashSpy to={link.href} saveHashHistory>
+								<Flex
+									as='button'
+									align='center'
+									gap='2'
+									py='2'
+									px='4'
+									rounded='base'
+									bg={
+										asPath === (link.href === '/' ? '/' : '/' + link.href)
+											? 'gray.600'
+											: 'transparent'
+									}
+									color={
+										colorMode === 'light'
+											? asPath === (link.href === '/' ? '/' : '/' + link.href)
+												? 'white'
+												: 'black'
+											: 'white'
+									}>
+									<Icon as={link.icon} />
+									{link.name}
+								</Flex>
+							</Link>
+						</React.Fragment>
 					))}
 				</Flex>
 			</DrawerContent>
