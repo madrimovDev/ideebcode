@@ -16,7 +16,7 @@ export type MenuLink = {
 const menuList: MenuLink[] = [
 	{
 		name: 'Home',
-		href: '',
+		href: 'home',
 		icon: AiOutlineHome,
 	},
 	{
