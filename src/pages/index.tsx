@@ -6,6 +6,7 @@ import Navbar from '../components/navbar'
 import NewLetter from '../components/newLetter'
 import FloatButtun from '../components/other/floatButton'
 import Services from '../components/services'
+import SocialMedia from '../components/social'
 import useHashRouter from '../hooks/useHashRouter'
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
 				<Article refObj={homeRef} />
 				<NewLetter />
 				<Services refObj={serviceRef} />
+				<SocialMedia />
 				{/* <FloatButtun /> */}
 			</Container>
 		</>
