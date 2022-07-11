@@ -24,9 +24,9 @@ const Social = () => {
 					justify='center'
 					align='center'>
 					{<link.icon size='50px' />}
-					<Heading fontSize='2xl' fontWeight='normal'>
+					{/* <Heading fontSize='2xl' fontWeight='normal'>
 						{link.name}
-					</Heading>
+					</Heading> */}
 				</Flex>
 			))}
 		</Flex>

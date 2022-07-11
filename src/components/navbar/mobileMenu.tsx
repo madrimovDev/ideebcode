@@ -53,10 +53,11 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuPropsType) => {
 			w='full'
 			h='100vh'
 			pos='fixed'
-			bg='gray.700'
+			bg={colorMode === 'dark' ? 'gray.700' : 'gray.100'}
 			right='0'
 			top='0'
 			zIndex='modal'
+			shadow='2xl'
 			p='4'>
 			<Flex justify='space-between' align='center'>
 				<ToggleTheme />
@@ -88,6 +89,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuPropsType) => {
 							fontSize='xl'
 							gap='3'
 							rounded='lg'
+							color={link.href === 'home' ? 'white' : 'initial'}
 							bg={link.href === 'home' ? 'gray.600' : ''}>
 							{<link.icon />}
 							{link.name}
