@@ -10,8 +10,14 @@ const DesktopMenu = () => {
 	return (
 		<Flex align='center' gap='8' display={['none', 'none', 'flex']}>
 			{menuList.map((link) => (
-				<Text key={link.href} transition='.3s' _hover={{ color: 'primary' }}>
-					<Link to={link.href}>{link.name}</Link>
+				<Text
+					key={link.href}
+					transition='.3s'
+					_hover={{ color: 'primary' }}
+					cursor='pointer'>
+					<Link hashSpy to={link.href} saveHashHistory smooth duration={800}>
+						{link.name}
+					</Link>
 				</Text>
 			))}
 			<ToggleTheme />
