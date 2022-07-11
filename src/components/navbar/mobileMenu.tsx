@@ -33,6 +33,11 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuPropsType) => {
 		ref: nav,
 		handler: onClose,
 	})
+
+	const setActive = (to: string) => {
+		setActiveHash(to)
+	}
+
 	return (
 		<Box
 			as={motion.div}
@@ -78,10 +83,14 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuPropsType) => {
 						smooth
 						saveHashHistory
 						hashSpy
+						offset={-80}
 						onClick={() => {
 							onClose()
 							setActiveHash(link.href)
-						}}>
+						}}
+						spy
+						activeClass={link.href}
+						onSetActive={setActive}>
 						<Flex
 							align='center'
 							py='2'
@@ -89,8 +98,8 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuPropsType) => {
 							fontSize='xl'
 							gap='3'
 							rounded='lg'
-							color={link.href === 'home' ? 'white' : 'initial'}
-							bg={link.href === 'home' ? 'gray.600' : ''}>
+							color={activeHash === link.href ? 'white' : 'initial'}
+							bg={activeHash === link.href ? 'gray.600' : ''}>
 							{<link.icon />}
 							{link.name}
 						</Flex>

@@ -28,7 +28,7 @@ const NewLetter = () => {
 			bg={color}
 			shadow='lg'
 			rounded='2xl'
-			mb={['100px', '100px', '150px']}
+			
 			gap='4'>
 			<Content />
 			<Form />

@@ -1,4 +1,4 @@
-import { Container } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useRef } from 'react'
 import Article from '../components/home'
@@ -22,12 +22,16 @@ const Home = () => {
 				<title>IDeap Group</title>
 			</Head>
 			<Container maxW='container.xl'>
-				<Navbar />
-				<Article refObj={homeRef} />
-				<NewLetter />
-				<Services refObj={serviceRef} />
-				<SocialMedia />
-				{/* <FloatButtun /> */}
+				<Box pb={['100px', '100px', '150px']} id='home'>
+					<Navbar />
+					<Article refObj={homeRef} />
+					<NewLetter />
+				</Box>
+				<Box pb={['100px', '100px', '150px']} id='ourservices'>
+					<Services refObj={serviceRef} />
+					<SocialMedia />
+					{/* <FloatButtun /> */}
+				</Box>
 			</Container>
 		</>
 	)

@@ -13,7 +13,6 @@ const Article = ({ refObj }: ArticlePropsType) => {
 	return (
 		<Flex
 			as={motion.div}
-			id=''
 			pos='relative'
 			animate={{
 				transition: {
@@ -22,8 +21,8 @@ const Article = ({ refObj }: ArticlePropsType) => {
 					staggerChildren: 2,
 				},
 			}}
-			mt={[0, '5', '10']}
-			mb={['100px', "100px", "150px"]}
+			pt={['100px', '100px', '10']}
+			pb={['100px', "100px", "150px"]}
 			flexDir={['column-reverse', 'column-reverse', 'row']}
 			ref={refObj}
 			justify='center'
