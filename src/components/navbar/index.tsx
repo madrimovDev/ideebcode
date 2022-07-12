@@ -17,7 +17,7 @@ const Navbar = () => {
 			as='div'
 			bg={['Background', 'Background', 'initial']}
 			zIndex={['overlay', 'overlay', 'initial']}
-			shadow={['base']}
+			shadow={['base', 'base', 'none']}
 			justify='space-between'
 			align='center'
 			py={['3', '3', '5']}>
